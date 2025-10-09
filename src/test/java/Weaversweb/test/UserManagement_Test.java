@@ -49,46 +49,53 @@ public class UserManagement_Test extends BaseTest {
         }
         // softAssert.assertAll();
     }@Test
-     public void Verify_user_can_Search() {
-       
+    public void Verify_user_can_Search() {
 
-        
-            loginPage = new LoginPage(page);
-            String username = ConfigReader.get("validUsername");
-            String password = ConfigReader.get("validPassword");
+        loginPage = new LoginPage(page);
+        String username = ConfigReader.get("validUsername");
+        String password = ConfigReader.get("validPassword");
 
-            loginPage.login(username, password);
-            String successMessage = loginPage.getSucessMessage();
-            softAssert.assertEquals(successMessage, ConfigReader.get("SucessFullLoginMessage"), "Success message mismatch");
+        loginPage.login(username, password);
+        String successMessage = loginPage.getSucessMessage();
+        softAssert.assertEquals(successMessage, ConfigReader.get("SucessFullLoginMessage"), "Success message mismatch");
 
-            String actualHeader = loginPage.getDashboardText();
-            softAssert.assertTrue(actualHeader.contains("Dashboard"), "Dashboard not found after login");
-            menuPage = new MenuPage(page);
-            menuPage.clickUserManagement();
-            usermanagement = new UserManagement(page);
-            usermanagement.search("paul");
-            boolean result = usermanagement.result("Bishal Paul");
-            
-           
-            try {
-                 Assert.assertTrue(result, "No search result contains the keyword: " + "Bishal Paul");
-                
-             } catch (Exception e) {
+        String actualHeader = loginPage.getDashboardText();
+        softAssert.assertTrue(actualHeader.contains("Dashboard"), "Dashboard not found after login");
+        menuPage = new MenuPage(page);
+        menuPage.clickUserManagement();
+        usermanagement = new UserManagement(page);
+        usermanagement.search("paul");
+        boolean result = usermanagement.result("Bishal Paul");
 
-                 Assert.assertEquals(loginPage.getErrorMessageText(), "User Not Found ",
-                         "Not matched as per the design");
-                 String messsgae = loginPage.getErrorMessageText();
-                 System.out.println(messsgae);
-               
-            }
-            
+        try {
+            Assert.assertTrue(result, "No search result contains the keyword: " + "Bishal Paul");
 
+        } catch (Exception e) {
 
+            Assert.assertEquals(loginPage.getErrorMessageText(), "User Not Found ",
+                    "Not matched as per the design");
+            String messsgae = loginPage.getErrorMessageText();
+            System.out.println(messsgae);
 
-
-
-        
         }
+
+    }
+        
+    @Test
+    public void filerActive()
+    {
+        loginPage = new LoginPage(page);
+        String username = ConfigReader.get("validUsername");
+        String password = ConfigReader.get("validPassword");
+
+        loginPage.login(username, password);
+        menuPage = new MenuPage(page);
+        menuPage.clickUserManagement();
+        usermanagement = new UserManagement(page);
+        usermanagement.deactiveUsers();
+
+
+    }
         // softAssert.assertAll();
     }
 

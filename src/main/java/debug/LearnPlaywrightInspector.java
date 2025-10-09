@@ -9,6 +9,7 @@ import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
 import com.microsoft.playwright.options.AriaRole;
 
+
 public class LearnPlaywrightInspector {
     public static void main(String[] args) {
         Playwright playwright = Playwright.create();
@@ -45,7 +46,7 @@ public class LearnPlaywrightInspector {
         // 5. Go back to main tab and enter OTP
         mainPage.bringToFront();
         mainPage.getByPlaceholder("Enter verify OTP").fill(otp);
-        
+
         mainPage.locator("button[type='submit']").click();
 
         // Optionally pause the page for inspection
@@ -54,5 +55,10 @@ public class LearnPlaywrightInspector {
         // Clean up resources
         // browser.close();
         // playwright.close();
+
     }
+    
+    
+
+    
 }

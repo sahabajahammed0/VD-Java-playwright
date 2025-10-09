@@ -13,7 +13,7 @@ public class CatagoryManagment extends BasePage {
     {
         super(page);
     }
-
+//------------------------------------xpath----------------------------------------------------------------------------
     private String categorymanagementText = "//h1[normalize-space()='Category Management']";
     private String addcatBTN = "//button[.='Add Category']";
     private String addSubCatBTN = "//button[.='Add Sub-Category']";
@@ -31,6 +31,53 @@ public class CatagoryManagment extends BasePage {
     private String amenties = "//input[@id='«r3b»']";
     private String categoryList = "//ul[@id='«r35»']//li";
     
+
+    //-----------------------------------Action ------------------------------------------------------------------------------------
+
+    public void createNewCategory(String categoryName, String categoryDescription) {
+        try {
+            logger.info("Navigating to Category Management section");
+            click(categorymanagementText);
+
+            logger.info("Clicking Add Category button");
+            click(addcatBTN);
+
+            fill(searchFiled, categoryName);
+            logger.info("Filling Category Name");
+            fill(desc, categoryDescription); // Assuming searchFiled is used for entering category name
+
+            logger.info("Filling Category Description");
+            fill(desc, categoryDescription);
+
+            logger.info("Clicking Submit button");
+            click(submitBTN);
+
+            // Wait for success message to appear
+            getText(CateforySucessMessage);
+
+            logger.info("New category added successfully");
+
+        } catch (Exception e) {
+            logger.error("Failed to create a new category", e);
+            throw e;
+        }
+    }
+
+
+    public void createAddSubcategory()
+    {
+        try {
+            
+            logger.info("navigate to Sub category Section ");
+        click(addSubCatBTN);
+
+        logger.info("clicking Add Subcategory Button");
+            
+        } catch (Exception e) {
+        }
+
+    }
+
 
     
 }

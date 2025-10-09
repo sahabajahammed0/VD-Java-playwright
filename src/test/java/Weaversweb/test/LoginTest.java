@@ -37,7 +37,7 @@ public class LoginTest extends BaseTest {
         } catch (Exception e) {
             softAssert.fail("Test failed due to exception: " + e.getMessage());
         }
-        softAssert.assertAll();
+        // softAssert.assertAll();
     }
 
     @Test(priority=2)

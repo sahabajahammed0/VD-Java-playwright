@@ -31,5 +31,14 @@ public class MenuPage extends BasePage {
        click(usermanagement);
        return new UserManagement(page);
    }
-    
+
+
+   public CatagoryManagment clickcategorymanagemet()
+   {
+       click(categorymanagement);
+       return new CatagoryManagment(page);
+
+   }
+   
+  
 }
