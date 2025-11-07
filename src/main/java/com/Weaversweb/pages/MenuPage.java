@@ -39,6 +39,14 @@ public class MenuPage extends BasePage {
        return new CatagoryManagment(page);
 
    }
+
+  public BusinessManagement clickBusinessManagement()
+  {
+    
+    click(Businessmanagement);
+    return new BusinessManagement(page);
+
+   }
    
   
 }

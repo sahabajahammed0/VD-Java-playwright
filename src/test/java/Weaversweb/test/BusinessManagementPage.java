@@ -2,22 +2,27 @@ package Weaversweb.test;
 
 import org.testng.annotations.Test;
 
-import com.Weaversweb.pages.CatagoryManagment;
+import com.Weaversweb.pages.BusinessManagement;
 import com.Weaversweb.pages.LoginPage;
 import com.Weaversweb.pages.MenuPage;
 import com.Weaversweb.utils.ConfigReader;
 
 import Weaversweb.basetest.BaseTest;
 
-public class Catagorymanagment_Test extends BaseTest {
+public class BusinessManagementPage extends BaseTest {
+    
 
-    LoginPage loginPage;
-    MenuPage menuPage;
-    CatagoryManagment categorymanagement;
+
+
+
+     LoginPage loginPage;
+     MenuPage menuPage;
+     BusinessManagement businessManagement;
+   
 
 
     @Test
-    public void User_can_able_to_Add_new_category()
+    public void User_can_able_approve_all_Business()
     {
         loginPage = new LoginPage(page);
             String username = ConfigReader.get("validUsername");
@@ -25,9 +30,14 @@ public class Catagorymanagment_Test extends BaseTest {
 
             loginPage.login(username, password);
             menuPage =new MenuPage(page);
-            menuPage.clickcategorymanagemet();
-            categorymanagement = new CatagoryManagment(page);
-            categorymanagement.createNewCategory("Wordpress", "add");
+            menuPage.clickBusinessManagement();
+            businessManagement = new BusinessManagement(page);
+          
+            businessManagement.approveAllBusiness();
+            
+
+
+           
            
             
 
@@ -36,5 +46,5 @@ public class Catagorymanagment_Test extends BaseTest {
             
     }
 
-
+    
 }

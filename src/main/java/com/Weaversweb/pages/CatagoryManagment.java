@@ -17,7 +17,7 @@ public class CatagoryManagment extends BasePage {
     private String categorymanagementText = "//h1[normalize-space()='Category Management']";
     private String addcatBTN = "//button[.='Add Category']";
     private String addSubCatBTN = "//button[.='Add Sub-Category']";
-    private String searchFiled = "//input[@id='common-text-field']";
+    private String searchFiled = "(//input[@id='common-text-field'])[2]";
     private String enterCategoryField = "/input[@placeholder='Enter Name']";
     private String desc = "//textarea[@id='common-text-field']";
     private String submitBTN = "//button[.='Submit']";
@@ -76,6 +76,12 @@ public class CatagoryManagment extends BasePage {
         } catch (Exception e) {
         }
 
+
+
+
+
+
+        
     }
 
 
