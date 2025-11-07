@@ -1,8 +1,11 @@
+/home/wadmin/Desktop/VD-WebAutomation/VD/src/main/java/com/Weaversweb/pages/UserManagement.java
 /home/wadmin/Desktop/VD-WebAutomation/VD/src/main/java/com/Weaversweb/base/BasePage.java
 /home/wadmin/Desktop/VD-WebAutomation/VD/src/main/java/com/Weaversweb/pages/MenuPage.java
+/home/wadmin/Desktop/VD-WebAutomation/VD/src/main/java/com/Weaversweb/pages/CatagoryManagment.java
 /home/wadmin/Desktop/VD-WebAutomation/VD/src/main/java/com/Weaversweb/utils/LoggerUtil.java
 /home/wadmin/Desktop/VD-WebAutomation/VD/src/main/java/com/Weaversweb/pages/ForgotPassword.java
 /home/wadmin/Desktop/VD-WebAutomation/VD/src/main/java/debug/LearnPlaywrightInspector.java
 /home/wadmin/Desktop/VD-WebAutomation/VD/src/main/java/com/Weaversweb/utils/TestDataGenerator.java
 /home/wadmin/Desktop/VD-WebAutomation/VD/src/main/java/com/Weaversweb/pages/LoginPage.java
+/home/wadmin/Desktop/VD-WebAutomation/VD/src/main/java/com/Weaversweb/pages/BusinessManagement.java
 /home/wadmin/Desktop/VD-WebAutomation/VD/src/main/java/com/Weaversweb/utils/ConfigReader.java

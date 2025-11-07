@@ -3,7 +3,7 @@ target/surefire-report/
 .idea/
 .vscode/
 *.iml
-*.logs
+logs
 reports/screenshots/
 target/test-classes/
 reports

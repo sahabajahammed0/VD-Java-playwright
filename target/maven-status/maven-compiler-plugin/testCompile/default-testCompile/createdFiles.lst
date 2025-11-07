@@ -1,3 +1,7 @@
-Weaversweb/basetest/BaseTest.class
 Weaversweb/test/LoginTest.class
+Weaversweb/test/UserManagement_Test.class
+Weaversweb/test/BusinessManagementPage.class
 Weaversweb/test/TestListener.class
+Weaversweb/basetest/BaseTest.class
+Weaversweb/test/Catagorymanagment_Test.class
+Weaversweb/test/TestingForLogicBuild.class
